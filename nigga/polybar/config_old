@@ -1,0 +1,70 @@
+[colors]
+background = ${xrdb:color0:#222}
+background-alt = #444
+;foreground = ${xrdb:color7:#222}
+foreground = #dfdfdf
+foreground-alt = #555
+primary = #FFF
+secondary = #B2535B
+alert = #B2535B
+
+[bar/top]
+modules-right = date
+modules-left = i3
+scroll-up = i3wm-wsnext
+scroll-down = i3wm-wsprev
+
+[module/date]
+type = internal/date
+date = %H:%M:%S | %d.%m.%Y
+
+[module/i3]
+type = internal/i3
+
+; Only show workspaces defined on the same output as the bar
+;
+; Useful if you want to show monitor specific workspaces
+; on different bars
+;
+; Default: false
+pin-workspaces = true
+
+; This will split the workspace name on ':'
+; Default: false
+strip-wsnumbers = true
+
+; Sort the workspaces by index instead of the default
+; sorting that groups the workspaces by output
+; Default: false
+index-sort = true
+
+; Create click handler used to focus workspace
+; Default: true
+enable-click = true
+
+; Create scroll handlers used to cycle workspaces
+; Default: true
+enable-scroll = false
+
+; Wrap around when reaching the first/last workspace
+
+; Default: true
+wrapping-scroll = false
+
+; Set the scroll cycle direction 
+; Default: true
+reverse-scroll = false
+
+; Use fuzzy (partial) matching on labels when assigning 
+; icons to workspaces
+; Example: code;♚ will apply the icon to all workspaces 
+; containing 'code' in the label
+; Default: false
+fuzzy-match = true
+
+label-unfocused-foreground = ${xrdb:color14}
+label-focused-foreground = ${xrdb:color11}
+label-focused-underline = ${xrdb:color11}
+
+[settings]
+screenchange-reload = true
